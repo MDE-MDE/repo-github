@@ -1,10 +1,20 @@
-body {
+html, body {
+    /* Растянули html и  Body  на всю высоту окна */
     height: 100%;
 }
 
-section {
+.hero {
+    /* Растянули секцию на всю высоту окна */
     height: 100vh;
     min-height: 650px;
-    background-image: url("/images/original/bg.png");
+
+    background: url("/images/original/bg.png") center center / cover no-repeat;
 }
 
+.header{
+    width: 1290px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
