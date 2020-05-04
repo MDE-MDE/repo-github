@@ -2,9 +2,9 @@ body {
     height: 100%;
 }
 
-.hero {
+section {
     height: 100vh;
     min-height: 650px;
-    background: url("/img/bg/hero.jpg") center center / cover no-repeat;
+    background-image: url("/images/original/bg.png");
 }
 
