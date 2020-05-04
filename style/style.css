@@ -3,12 +3,19 @@ html, body {
     height: 100%;
 }
 
+body{
+    font: 16px / 1.42 "Roboto", Arial, sans-serif;
+    color: #212121;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothng: grayscale;
+}
+
 .hero {
     /* Растянули секцию на всю высоту окна */
     height: 100vh;
     min-height: 650px;
-
-    background: url("/images/original/bg.png") center center / cover no-repeat;
+    position: relative;
+    background: url("/images/bg/hero.jpg") center center / cover no-repeat;
 }
 
 .header{
@@ -17,4 +24,34 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.mail{
+    text-decoration: none;
+    text-align: center;
+    color: inherit;
+}
+
+.mail__title{
+    margin-bottom: 3px;
+}
+
+.mail__content{
+    background-color: #212121;
+    color: #ffbc2f;
+    padding: 10px 15px;
+}
+
+.fade-slider{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1140px;
+    height: 72%;
+}
+
+.fade-slider__item{
+    background: url("/images/content/hero/slider_pic_1.png") center center / cover no-repeat;
+    height: 150%;
 }
