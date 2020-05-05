@@ -1,13 +1,42 @@
+@font-face {
+    font-family: 'alegreya';
+    src: url('/fonts/alegreyasanssc-black-webfont.woff2') format('woff2'),
+         url('/fonts/alegreyasanssc-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --yellow:#ffbc2f;
+    --black: #212121;
+    --red: #da3e3c;
+    --fonts-link: 'Yanone Kaffeesatz', Arial, sans-serif;
+}
+
 html, body {
     /* Растянули html и  Body  на всю высоту окна */
     height: 100%;
 }
 
+.wrapper{
+    overflow: hidden;
+    min-width: 1310px;
+}
+
 body{
     font: 16px / 1.42 "Roboto", Arial, sans-serif;
-    color: #212121;
+    color: var(--black);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothng: grayscale;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+ul > li{
+    list-style: none;
 }
 
 .hero {
@@ -16,6 +45,7 @@ body{
     min-height: 650px;
     position: relative;
     background: url("/images/bg/hero.jpg") center center / cover no-repeat;
+    margin-bottom: 130px;
 }
 
 .header{
@@ -24,6 +54,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 27px;
 }
 
 .mail{
@@ -37,12 +68,12 @@ body{
 }
 
 .mail__content{
-    background-color: #212121;
-    color: #ffbc2f;
+    background: var(--black);
+    color: var(--yellow);
     padding: 10px 15px;
 }
 
-.fade-slider{
+.hero__content{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -51,7 +82,79 @@ body{
     height: 72%;
 }
 
+.fade-slider{
+    width: 100%;
+    height: 100%;
+}
+
 .fade-slider__item{
     background: url("/images/content/hero/slider_pic_1.png") center center / cover no-repeat;
-    height: 150%;
+    height: 100%;
+}
+
+.fade-slader__text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-164%, -52%);
+}
+
+.lined-text{
+    font-family: "alegreya", Arial, sans-serif;
+    color: white;
+    font-size: 63px;
+    text-transform: uppercase;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.lined-text__word{
+    background: var(--black);
+    padding: 0 17px 8px;
+    margin-top: -7px;
+}
+
+.lined-text__word--color--yellow{
+    color: var(--yellow);
+}
+
+.lined-text__word:nth-child(2n){
+    margin-left: 8px;
+}
+
+.filter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.filter__item{
+    margin-right: 30px;
+}
+
+.filter__item:last-child{
+    margin-right: 0;
+}
+
+.filter__link{
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 7px 21px 3px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: var(--fonts-link);
+    color:var(--black);
+}
+
+.filter__link:hover{
+    color: var(--red);
+}
+
+.filter__item--activ .filter__link{
+    background: var(--black);
+    color: var(--yellow);
 }
