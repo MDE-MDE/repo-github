@@ -1,8 +1,14 @@
-const slides = document.querySelectorAll('.fade-slider__item');
-let index = 0;
-console.log(slides);
-
-setInterval(function(){
-    index++;
-    console.log(index);
-}, 1000);
+(function(){
+    const slides = document.querySelectorAll('.fade-slider__item');
+    const activeClass = 'fade-slider__item--visble';
+    let index = 0;
+    // console.log(slides);
+    setInterval(function(){
+        slides[index].classList.remove(activeClass);
+        index++;
+        if(index + 1 > slides.length){
+            index = 0;
+        }
+        slides[index].classList.add(activeClass);
+    }, 5000);
+}());
