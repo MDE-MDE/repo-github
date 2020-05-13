@@ -1,3 +1,5 @@
 .idea/
 *.zip
 *.xml
+*.iml
+*.yml
